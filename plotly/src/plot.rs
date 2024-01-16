@@ -303,6 +303,10 @@ impl Plot {
         Plot::show_with_default_app(temp_path);
     }
 
+    pub fn get_image_html(&self, format: ImageFormat, width: usize, height: usize) -> String {
+        self.render_static(format, width, height)
+    }
+
     /// Save the rendered `Plot` to a file at the given location.
     ///
     /// This method will render the plot to a full, standalone HTML document,
